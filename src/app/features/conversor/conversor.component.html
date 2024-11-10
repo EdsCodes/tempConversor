@@ -1,0 +1,27 @@
+<mat-card class="temp-converter-card">
+  <mat-card-content>
+    <form>
+      <mat-form-field appearance="outline" class="form-field">
+        <input
+          matInput
+          type="number"
+          [(ngModel)]="celsiusValue"
+          (ngModelChange)="convertFromCelsius()"
+          name="celsius"
+          placeholder="Ingresa Celsius"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <input
+          matInput
+          type="number"
+          [(ngModel)]="fahrenheitValue"
+          (ngModelChange)="convertFromFahrenheit()"
+          name="fahrenheit"
+          placeholder="Ingresa Fahrenheit"
+        />
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>

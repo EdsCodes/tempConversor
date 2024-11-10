@@ -1,0 +1,64 @@
+$primary-color: #0077b5;
+$input-bg-color: #f3f4f6;
+$text-color: #333;
+$label-color: #555;
+
+.temp-converter-card {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+}
+
+.form-field {
+  width: 100%;
+
+  mat-form-field {
+    background-color: $input-bg-color;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .mat-form-field-wrapper {
+      padding: 0 8px;
+    }
+
+    .mat-form-field-label {
+      color: $label-color;
+      font-weight: 500;
+    }
+
+    input {
+      color: $text-color;
+      border-radius: 15%;
+      
+    }
+
+    &.mat-focused .mat-form-field-label {
+      color: $primary-color;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: $primary-color;
+    }
+  }
+
+  input::placeholder {
+    color: lighten($text-color, 40%);
+    font-style: italic;
+    font-size: smaller;
+  }
+}
